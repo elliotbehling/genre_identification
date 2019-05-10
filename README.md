@@ -14,7 +14,7 @@ ml_training.py
 
 This script takes in the csv file and splits it into target data (genre) and feature data which is then split further into train and test. Then we use scikitlearn to train a machine learning algorithm on the train data and test it using the test data. This file includes in its main function the ability to test the algorithm's prediction of a single song. See below for details.
 
-Other files: 
+Other files
 
 test_1_song.py generates a csv file for a single song which can then be used to test the machine learning algorithm in ml_training on a single song to predict its genre. 
 
@@ -26,21 +26,21 @@ Lil Nas X - Old Town Road (feat. Billy Ray Cyrus) [Remix].csv - the csv created 
 
 read_me.txt - this read_me file (contains instructions)
 
-INSTRUCTIONS: 
+INSTRUCTIONS
 
-Downloading data folder (not necessary to run ml_training): 
+Downloading data folder (not necessary to run ml_training)
 
 Use this link to download the GTZAN dataset of 1000 songs: http://opihi.cs.uvic.ca/sound/genres.tar.gz
 
 Make sure you download it to the same folder as the rest of these files. 
 
-Runing ml_training.py (without testing 1 song):
+Runing ml_training.py (without testing 1 song)
 
     This will provide you with the training iterations and a readout of various metrics on the success of our machine learning algorithm achieved in classifying the song_data.csv file by genre
     
     Note: to run, it must have the csv datafile already in the folder. This is all it needs to run as is. 
 
-Running test_1_song.py to create csv file for 1 song: 
+Running test_1_song.py to create csv file for 1 song
 
     1: Download a song as an mp3 and place it in the folder with the rest of these files and folders (or just use old town road again). 
     
@@ -49,7 +49,7 @@ Running test_1_song.py to create csv file for 1 song:
         
         To test this song, follow the instructions on running ml_training.py with testing 1 song (below)
 
-Running ml_training.py with testing 1 song: 
+Running ml_training.py with testing 1 song
 
     1: uncomment these three lines of code (at the bottom in the __main__ function): 
 
@@ -63,7 +63,7 @@ Running ml_training.py with testing 1 song:
         
         this will then use our machine learning algorithm to make a prediction about the genre of that song. Keep in mind, it has a ~30% accuracy rate, so it might get it wrong a few times. It's best to run it 10-20 times and see what occurs the most. 
 
-Running data_generation.py: (only if you want to create your own version of song_data.csv which you already have)
+Running data_generation.py (only if you want to create your own version of song_data.csv which you already have)
 
     1: make sure the "data" folder is in the same folder as this file (it's pretty large)
     
@@ -73,13 +73,13 @@ Running data_generation.py: (only if you want to create your own version of song
     
         this will begin printing the numbers 1-1000 (each represents calculating the features for a song in our database using librosa). When it gets to 1000, it's done. 
 
-NOTES and CONCLUSIONS: 
+NOTES and CONCLUSIONS
 
-feature generation: 
+feature generation
 
 This project was made extremely challenging because of how difficult it is to generate features of a song that represent its musical signature. We used 3 main feature generating functions from Librosa, and each captured very different information, but it was not nearly enough to categorize our songs with any consistency. Of course, a larger songbank would have likely helped as well, but it would not have gotten us from our 30% success rate to the 80% success rate of the project we based ours on. We suspect that no amount of features could get one to this level of identification either, as they included a convolutional neural net in their project (and also used their own feature generation somehow). 
 
-The functions we used from Librosa are: 
+The functions we used from Librosa are:
 
 librosa.beat.beat_track which provided us with tempo which is the bpm and beat_frames which is a measure of beat "events" sampled at a number of regular time intervales throughout the song. 
 
@@ -93,11 +93,11 @@ Link to the github of the project we based ours on: https://github.com/deepsound
 
 Link to their "80% accuracy" demo: http://deepsound.io/genres/
 
-ml testing accuracy: 
+ml testing accuracy
 
 Our ml testing accuracy varied a lot. We believe this is just due to how poor it was, and how small our sample size for testing was (150 songs) meaning if it fluctuates between properly categorizing or miscategorizing 15 songs, that's a 10% change in accuracy. Because of this, we found it best to run the file ~10 times and average the results. We found they averaged to around 30%. 
 
-Concusions: 
+Concusions
 
 Our main takeaway is that music itself is incredibly human, particularly the differences we hear are truly subtle and difficult to quantify. Even telling if something is a song or not is slightly challenging. Rhythmic identification is easiest, but it can still be tricked into thinking something is a song that's not. However, examples of older generations listening to young kid's music and saying "this isn't music!" just proves how truly subjective and wildly different our conceptions of music, good music, and categories of music are. We think this makes it clear that the level of information we take in when listening to a song is simply far beyond what we are able to extract using the tools available to us from an mp3. 
 
