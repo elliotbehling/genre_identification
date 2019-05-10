@@ -81,7 +81,7 @@ This project was made extremely challenging because of how difficult it is to ge
 
 The functions we used from Librosa are:
 
-librosa.beat.beat_track which provided us with tempo which is the bpm and beat_frames which is a measure of beat "events" sampled at a number of regular time intervales throughout the song. 
+librosa.beat.beat_track which provided us with tempo which is the bpm and beat_frames which is a measure of beat "events" sampled at a number of regular time intervals throughout the song. 
 
 librosa.frames_to_beat which provided us with beat_times which estimates the number of beat instances in a regular time interval
 
@@ -97,7 +97,7 @@ ml testing accuracy
 
 Our ml testing accuracy varied a lot. We believe this is just due to how poor it was, and how small our sample size for testing was (150 songs) meaning if it fluctuates between properly categorizing or miscategorizing 15 songs, that's a 10% change in accuracy. Because of this, we found it best to run the file ~10 times and average the results. We found they averaged to around 30%. 
 
-Concusions
+Conclusions
 
 Our main takeaway is that music itself is incredibly human, particularly the differences we hear are truly subtle and difficult to quantify. Even telling if something is a song or not is slightly challenging. Rhythmic identification is easiest, but it can still be tricked into thinking something is a song that's not. However, examples of older generations listening to young kid's music and saying "this isn't music!" just proves how truly subjective and wildly different our conceptions of music, good music, and categories of music are. We think this makes it clear that the level of information we take in when listening to a song is simply far beyond what we are able to extract using the tools available to us from an mp3. 
 
