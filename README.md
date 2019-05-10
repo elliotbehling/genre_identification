@@ -12,8 +12,6 @@ this script takes in the dataset of songs and produces a set of features designe
 ml_training.py
 This script takes in the csv file and splits it into target data (genre) and feature data which is then split further into train and test. Then we use scikitlearn to train a machine learning algorithm on the train data and test it using the test data. This file includes in its main function the ability to test the algorithm's prediction of a single song. See below for details.
 
-data - dataset folder of folders dividing 1000 song files into genre folders.
-
 Other files: 
 
 test_1_song.py generates a csv file for a single song which can then be used to test the machine learning algorithm in ml_training on a single song to predict its genre. 
@@ -28,7 +26,9 @@ read_me.txt - this read_me file (contains instructions)
 
 INSTRUCTIONS: 
 
-Unzip zip file (contains a database of 1000 mp3 files, it might take some time)
+Downloading data folder (not necessary to run ml_training): 
+Use this link to download the GTZAN dataset of 1000 songs: http://opihi.cs.uvic.ca/sound/genres.tar.gz
+Make sure you download it to the same folder as the rest of these files. 
 
 Runing ml_training.py (without testing 1 song):
     This will provide you with the training iterations and a readout of various metrics on the success of our machine learning algorithm achieved in classifying the song_data.csv file by genre
@@ -71,6 +71,8 @@ librosa.frames_to_beat which provided us with beat_times which estimates the num
 librosa.feature.chroma_stft which provided us with a list of the volume of pitch ranges sampled at a number of regular time intervals throughout the song. We averaged these to provide us with an estimator of the melody. 
 
 Librosa Tutorial found here: https://librosa.github.io/librosa/tutorial.html
+Link to the github of the project we based ours on: https://github.com/deepsound-project/genre-recognition
+Link to their "80% accuracy" demo: http://deepsound.io/genres/
 
 ml testing accuracy: 
 Our ml testing accuracy varied a lot. We believe this is just due to how poor it was, and how small our sample size for testing was (150 songs) meaning if it fluctuates between properly categorizing or miscategorizing 15 songs, that's a 10% change in accuracy. Because of this, we found it best to run the file ~10 times and average the results. We found they averaged to around 30%. 
