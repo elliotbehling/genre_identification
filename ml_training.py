@@ -14,18 +14,6 @@ import csv
 
 current_folder_path = getcwd()
 
-#
-# learn a two-input, two-output classifier
-# 
-# AND:
-# OR:
-# XOR: ???
-#
-
-# 
-# try an iris classifier...
-#
-
 print("+++ Start of song data +++\n")
 # For Pandas's read_csv, use header=0 when you know row 0 is a header row
 # df here is a "dataframe":
