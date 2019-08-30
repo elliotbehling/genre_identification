@@ -83,7 +83,7 @@ y_test = y_data[TRAIN_SIZE:]
 #    This is done through the "StandardScaler" in scikit-learn
 # 
 USE_SCALER = True
-if USE_SCALER == True:
+if USE_SCALER:
     from sklearn.preprocessing import StandardScaler
     scaler = StandardScaler()
     scaler.fit(X_train)   # Fit only to the training dataframe
